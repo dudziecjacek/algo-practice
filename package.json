@@ -1,0 +1,16 @@
+{
+  "name": "claude-algo-katas",
+  "version": "1.0.0",
+  "description": "Codility assessment prep: algorithm exercises grouped by the three task types, each with an empty practice stub and a reference solution.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "cross-env REF=1 vitest run"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "vitest": "^2.1.9"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__get_page_text",
+      "mcp__claude-in-chrome__read_network_requests",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__browser_batch",
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Bash(rm -rf exercises)",
+      "Bash(rmdir \"01-first-opposite-pair\")",
+      "Bash(echo \"exit:$?\")"
+    ]
+  }
+}
