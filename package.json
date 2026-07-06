@@ -5,6 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "clear-practice": "node clear-practice.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "verify": "cross-env REF=1 vitest run"
