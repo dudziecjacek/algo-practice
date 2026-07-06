@@ -19,4 +19,15 @@ describe("Equilibrium Index", () => {
     expect(equilibrium([0, 5, -5])).toBe(0); // left side empty, right sums to 0
     expect(equilibrium([2, 3])).toBe(-1);
   });
+
+  it(
+    "stays fast on large inputs (re-summing slices per index is O(n^2) and would time out)",
+    () => {
+      const ones = new Array(400_001).fill(1);
+      expect(equilibrium(ones)).toBe(200_000); // left = right = 200k ones
+      const noPivot = new Array(400_000).fill(1); // even count of ones -> no equilibrium
+      expect(equilibrium(noPivot)).toBe(-1); // forces a full scan
+    },
+    2000
+  );
 });

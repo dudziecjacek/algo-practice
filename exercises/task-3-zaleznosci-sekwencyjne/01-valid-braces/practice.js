@@ -1,4 +1,16 @@
-// Your turn. Implement the function, then run `npm test` (or `npm run test:watch`).
-// Stuck? The reference answer is in ./solution.js
+export function validBraces(s) {
+  const pairs = { ")": "(", "]": "[", "}": "{" };
+  const stack = [];
 
-export function validBraces(s) {}
+  for (const ch of s) {
+    if (ch === "(" || ch === "[" || ch === "{") {
+      stack.push(ch);
+    } else if (ch === ")" || ch === "]" || ch === "}") {
+      if (stack.pop() !== pairs[ch]) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}

@@ -18,4 +18,14 @@ describe("Pivot with Multiplier", () => {
     expect(pivotMultiplier([], 2)).toBe(-1);
     expect(pivotMultiplier([2, 1, 1, 1, 2], 1)).toBe(2);
   });
+
+  it(
+    "stays fast on large inputs (re-summing slices per index is O(n^2) and would time out)",
+    () => {
+      // all ones: left = i, right = n-1-i; 2i = n-1-i -> i = (n-1)/3
+      const ones = new Array(300_001).fill(1);
+      expect(pivotMultiplier(ones, 2)).toBe(100_000);
+    },
+    2000
+  );
 });

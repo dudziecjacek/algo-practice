@@ -14,9 +14,11 @@ describe("Two Sum", () => {
 
   it("edge cases", () => {
     expect(twoSum([0, 4, 3, 0], 0)).toStrictEqual([0, 3]); // two zeros
-    expect(twoSum([2, 1, 1, 2, 0], 3)).toStrictEqual([2, 3]); // first is smaller than second
+    expect(twoSum([2, 1, 1, 2, 0], 3)).toStrictEqual([0, 1]); // 2+1 completes at index 1 already
     expect(twoSum([-3, 3], 0)).toStrictEqual([0, 1]); // negatives
     expect(twoSum([5, 75, 25], 100)).toStrictEqual([1, 2]);
+    expect(twoSum([1, 5, 1, 2], 3)).toStrictEqual([0, 3]); // partner 1 seen twice: EARLIEST index wins
+    expect(twoSum([1, 2, 4], 100)).toBeUndefined(); // no pair
   });
 
   it("stays fast on large inputs", () => {

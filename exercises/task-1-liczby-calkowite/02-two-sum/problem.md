@@ -2,7 +2,10 @@
 
 Given an array of integers `numbers` and a `target`, return the indices
 of the two numbers that add up to `target`, as `[i, j]` with `i < j`.
-Assume exactly one solution exists.
+If several pairs sum to `target`, **the first pair to complete wins**:
+scanning left to right, return at the first index `j` whose partner has
+already been seen — and `i` is the *earliest* index holding that partner
+value. Return `undefined` if no pair exists.
 
 ```js
 export function twoSum(numbers, target) {
@@ -30,4 +33,6 @@ Flip the question from "search for the partner" to "have I already seen
 plain `Set` can't work here because you must return *where* you saw the
 number, not just that you saw it). Check the complement **before**
 storing the current number, so you never pair a number with itself and
-you return the earliest completing pair.
+you return the earliest completing pair. Store only the **first** index
+of each value (don't overwrite on duplicates) — that's what makes `i`
+the earliest occurrence of the partner.

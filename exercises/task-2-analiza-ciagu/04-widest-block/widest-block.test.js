@@ -17,5 +17,18 @@ describe("Widest Block", () => {
     expect(widestBlock([42], 1)).toBe(0);
     // ties resolve to the earliest block
     expect(widestBlock([1, 3, 0, 2, 5, 7], 3)).toBe(0); // ranges 2, 2, 2 -> first
+    // all-negative ranges still compare correctly
+    expect(widestBlock([-9, -1, -4, -4], 2)).toBe(0); // ranges 8, 0
   });
+
+  it(
+    "handles 1M elements in 4 blocks (Math.min/max(...block) would blow the stack)",
+    () => {
+      const n = 1_000_000;
+      const arr = new Array(n).fill(0);
+      arr[600_000] = 100; // only block 2 (indices 500k..750k) has a non-zero range
+      expect(widestBlock(arr, 4)).toBe(2);
+    },
+    2000
+  );
 });

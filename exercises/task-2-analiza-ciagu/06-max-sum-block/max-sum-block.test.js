@@ -17,4 +17,15 @@ describe("Max Sum Block", () => {
     expect(maxSumBlock([0, 0, 0, 0], 2)).toBe(0);
     expect(maxSumBlock([-5, -5, 1, 0], 2)).toBe(1); // block sums -10, 1 -> 1
   });
+
+  it(
+    "handles 1M elements in 4 blocks (slice+reduce clones per block; a prefix rescan per block is O(n^2))",
+    () => {
+      const n = 1_000_000;
+      const arr = new Array(n).fill(1);
+      arr[600_000] = 1000; // block 2 sums to 250_999, the rest to 250_000
+      expect(maxSumBlock(arr, 4)).toBe(250_999);
+    },
+    2000
+  );
 });

@@ -4,10 +4,12 @@ export function blockRanges(arr, k) {
 
   for (let b = 0; b < k; b++) {
     const start = b * blockSize;
-    let min = arr[start];
-    let max = arr[start];
+    let min = Infinity;
+    let max = -Infinity;
 
-    for (let i = start + 1; i < start + blockSize; i++) {
+    // Seeding with ±Infinity means the loop MUST start at `start` —
+    // starting at start+1 silently drops each block's first element.
+    for (let i = start; i < start + blockSize; i++) {
       if (arr[i] < min) min = arr[i];
       if (arr[i] > max) max = arr[i];
     }

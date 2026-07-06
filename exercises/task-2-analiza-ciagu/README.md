@@ -16,7 +16,7 @@ partition the array, so the inner iterations sum back to `n`.
 | [02-block-maxima](02-block-maxima) | split into fixed-size blocks, return the max of each |
 | [03-block-ranges](03-block-ranges) | `max - min` of every block (min + max tracked together) |
 | [04-widest-block](04-widest-block) | index of the widest block, earliest on ties |
-| [05-block-minima](05-block-minima) | min of each block (the mirror of block-maxima) |
+| [05-block-minima](05-block-minima) | min of each block with an **uneven tail block** (`Math.ceil` / clamped end) |
 | [06-max-sum-block](06-max-sum-block) | largest block **sum**, `-Infinity` seed for all-negative input |
 
 Topics: indexing & splitting into ranges · min/max functions · loops

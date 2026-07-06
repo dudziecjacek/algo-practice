@@ -26,8 +26,14 @@ blockRanges([-5, 5, 0, 0], 2)      // -> [10, 0]
 
 ## Pattern / gotcha
 
-Track both `min` and `max` in a single pass per block (seed both with the
-block's first element), then push `max - min`. This is the same skill as
-Largest Block Range and Block Maxima combined — no sorting, no
-`Math.min(...slice)` / `Math.max(...slice)` spread. Each element is
-visited once → O(n).
+Track both `min` and `max` in a single pass per block, then push
+`max - min`. Two valid seeding styles — don't mix them up:
+
+- seed with the block's **first element** and scan from the *second*, or
+- seed with `Infinity` / `-Infinity` and scan from the *first*.
+
+Seeding with `±Infinity` but starting the scan at `start + 1` silently
+drops each block's first element — `[10, 20]` with `k = 1` returns `[0]`
+instead of `[10]`. This is the same skill as Largest Block Range and
+Block Maxima combined — no sorting, no `Math.min(...slice)` /
+`Math.max(...slice)` spread. Each element is visited once → O(n).

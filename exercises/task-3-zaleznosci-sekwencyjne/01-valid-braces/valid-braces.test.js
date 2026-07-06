@@ -19,4 +19,14 @@ describe("Valid Braces", () => {
     expect(validBraces(")")).toBe(false); // closer with nothing to close
     expect(validBraces("[({})]")).toBe(true);
   });
+
+  it(
+    "stays fast on a 600k-char string (a replace('()','')-style loop is O(n^2) and would time out)",
+    () => {
+      const k = 100_000;
+      expect(validBraces("([{".repeat(k) + "}])".repeat(k))).toBe(true);
+      expect(validBraces("([{".repeat(k) + "}])".repeat(k) + ")")).toBe(false);
+    },
+    2000
+  );
 });

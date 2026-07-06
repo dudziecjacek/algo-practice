@@ -15,5 +15,18 @@ describe("Block Maxima", () => {
   it("edge cases", () => {
     expect(blockMaxima([3, 1, 4, 1, 5, 9], 6)).toStrictEqual([9]); // one block = whole array
     expect(blockMaxima([3, 1, 4, 1, 5, 9], 1)).toStrictEqual([3, 1, 4, 1, 5, 9]); // block of 1 = identity
+    expect(blockMaxima([9, 1, 2, 3], 2)).toStrictEqual([9, 3]); // first element is the block max
   });
+
+  it(
+    "handles 1M elements in 250k blocks (Math.max(...block) would blow the stack)",
+    () => {
+      const n = 1_000_000;
+      const arr = Array.from({ length: n }, (_, i) => i);
+      expect(blockMaxima(arr, 250_000)).toStrictEqual([
+        249_999, 499_999, 749_999, 999_999,
+      ]);
+    },
+    2000
+  );
 });

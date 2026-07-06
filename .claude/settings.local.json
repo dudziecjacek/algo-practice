@@ -11,7 +11,13 @@
       "Bash(npm test *)",
       "Bash(rm -rf exercises)",
       "Bash(rmdir \"01-first-opposite-pair\")",
-      "Bash(echo \"exit:$?\")"
+      "Bash(echo \"exit:$?\")",
+      "PowerShell(npm test -- --reporter=basic 2>$null)",
+      "PowerShell(npm run verify -- --reporter=basic 2>$null)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Użytkownik\\\\Documents\\\\VSCode\\\\algo-practice\\\\exercises\\\\task-1-liczby-calkowite\" -Recurse -Filter \"practice.js\" | ForEach-Object { Write-Host \"=== $\\($_.FullName\\) ===\" ; Get-Content $_.FullName })",
+      "PowerShell(cd \"C:\\\\Users\\\\Użytkownik\\\\Documents\\\\VSCode\\\\algo-practice\" ; $env:REF='1' ; npm test -- exercises/task-1-liczby-calkowite/03-stray-number 2>&1 | Select-Object -First 50)",
+      "PowerShell(npm run verify -- --reporter=basic)",
+      "PowerShell(npx vitest run exercises/task-2-analiza-ciagu/03-block-ranges --reporter=basic)"
     ]
   }
 }

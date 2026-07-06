@@ -34,8 +34,9 @@ check-before-store, O(n).
 
 ### [Task 2 — Analiza ciągu wartości liczbowych](exercises/task-2-analiza-ciagu)
 Split into ranges, compare min/max per part — single-pass extremes, no
-sort, no spread.
-- Largest Block Range · Block Maxima · Block Ranges · Widest Block · Block Minima · Max Sum Block
+sort, no spread. Block Minima adds the uneven-split case (last block
+shorter).
+- Largest Block Range · Block Maxima · Block Ranges · Widest Block · Block Minima (uneven) · Max Sum Block
 
 ### [Task 3 — Logika zależności sekwencyjnych](exercises/task-3-zaleznosci-sekwencyjne)
 Order-dependent conditions — running state, prefix sums, stacks.
