@@ -17,7 +17,9 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Użytkownik\\\\Documents\\\\VSCode\\\\algo-practice\\\\exercises\\\\task-1-liczby-calkowite\" -Recurse -Filter \"practice.js\" | ForEach-Object { Write-Host \"=== $\\($_.FullName\\) ===\" ; Get-Content $_.FullName })",
       "PowerShell(cd \"C:\\\\Users\\\\Użytkownik\\\\Documents\\\\VSCode\\\\algo-practice\" ; $env:REF='1' ; npm test -- exercises/task-1-liczby-calkowite/03-stray-number 2>&1 | Select-Object -First 50)",
       "PowerShell(npm run verify -- --reporter=basic)",
-      "PowerShell(npx vitest run exercises/task-2-analiza-ciagu/03-block-ranges --reporter=basic)"
+      "PowerShell(npx vitest run exercises/task-2-analiza-ciagu/03-block-ranges --reporter=basic)",
+      "PowerShell(node \"C:\\\\Users\\\\UYTKOW~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-U-ytkownik-Documents-VSCode-algo-practice\\\\15c0db2e-5fe3-4abf-a6ff-1388f60439c7\\\\scratchpad\\\\count-check.mjs\")",
+      "PowerShell(npm run verify -- --reporter=basic run exercises/task-3-zaleznosci-sekwencyjne)"
     ]
   }
 }

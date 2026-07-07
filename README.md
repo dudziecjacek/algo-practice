@@ -39,8 +39,9 @@ shorter).
 - Largest Block Range · Block Maxima · Block Ranges · Widest Block · Block Minima (uneven) · Max Sum Block
 
 ### [Task 3 — Logika zależności sekwencyjnych](exercises/task-3-zaleznosci-sekwencyjne)
-Order-dependent conditions — running state, prefix sums, stacks.
-- Valid Braces · Equilibrium Index · First Negative Balance · Pivot with Multiplier · Balanced Parentheses · First Unsorted Index
+Order-dependent conditions — running state, prefix sums, stacks; answers
+span first-index, count, and longest-stretch.
+- Valid Braces · Equilibrium Index · First Negative Balance · Longest Non-Decreasing Run · Count Balanced Prefixes · First Unsorted Index
 
 ### [Fundamentals](exercises/fundamentals)
 General array/set skills and boundary reasoning.
