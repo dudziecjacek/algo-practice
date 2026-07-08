@@ -15,21 +15,13 @@ export function firstUnsortedIndex(arr) {
 ## Examples
 
 ```js
-firstUnsortedIndex([1, 2, 3, 2, 5]) // -> 3   (2 < 3)
-firstUnsortedIndex([1, 2, 3, 4])    // -> -1  (already sorted)
-firstUnsortedIndex([5, 4, 3])       // -> 1   (4 < 5)
-firstUnsortedIndex([1, 1, 1])       // -> -1  (equal is allowed)
+firstUnsortedIndex([1, 2, 3, 2, 5]); // -> 3   (2 < 3)
+firstUnsortedIndex([1, 2, 3, 4]); // -> -1  (already sorted)
+firstUnsortedIndex([5, 4, 3]); // -> 1   (4 < 5)
+firstUnsortedIndex([1, 1, 1]); // -> -1  (equal is allowed)
 ```
 
 ## Constraints
 
 - Length up to 1,000,000 — must be O(n), single pass.
 - Values can be negative, zero, or positive.
-
-## Pattern / gotcha
-
-A pure order/sequence condition: compare each element to its predecessor
-and return the moment the ordering first breaks. Start the loop at index
-`1` (index 0 has no predecessor). Use strict `<` so equal neighbours are
-treated as still sorted. An empty array or a single element is trivially
-sorted → `-1`.

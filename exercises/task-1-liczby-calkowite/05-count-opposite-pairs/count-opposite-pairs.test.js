@@ -21,7 +21,9 @@ describe("Count Opposite Pairs", () => {
   });
 
   it("stays fast on large inputs (an O(n^2) pair scan would time out here)", () => {
-    const arr = Array.from({ length: 500_000 }, (_, i) => (i % 2 === 0 ? 1 : -1));
+    const arr = Array.from({ length: 500_000 }, (_, i) =>
+      i % 2 === 0 ? 1 : -1,
+    );
     // 250k ones and 250k minus-ones -> 250000 * 250000 pairs
     expect(countOppositePairs(arr)).toBe(250_000 * 250_000);
   });
