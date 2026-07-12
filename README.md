@@ -51,6 +51,16 @@ General array/set skills and boundary reasoning.
 A timed-dry-run puzzle that ties it together.
 - Guardian of the Lost Artifact
 
+## Assessment #2 — [exercises_leetcode](exercises_leetcode)
+
+A separate track for the second, broader interview (sorting/searching,
+divide-and-conquer, DP, greedy, recursion, trees, linked lists, queues,
+and an LRU-cache design section). It deliberately skips what `exercises/`
+already covers. Each section has an `ELI5.md` theory primer plus 2
+exercises (the LRU-cache section has 3). Same practice loop
+(`npm test` / `test:watch` / `verify`). See
+its [README](exercises_leetcode/README.md) for the area-by-area map.
+
 ## The recurring theme
 
 Almost every exercise is really the same trap: doing O(n) work *inside* a

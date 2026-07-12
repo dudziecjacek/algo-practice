@@ -19,7 +19,15 @@
       "PowerShell(npm run verify -- --reporter=basic)",
       "PowerShell(npx vitest run exercises/task-2-analiza-ciagu/03-block-ranges --reporter=basic)",
       "PowerShell(node \"C:\\\\Users\\\\UYTKOW~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-U-ytkownik-Documents-VSCode-algo-practice\\\\15c0db2e-5fe3-4abf-a6ff-1388f60439c7\\\\scratchpad\\\\count-check.mjs\")",
-      "PowerShell(npm run verify -- --reporter=basic run exercises/task-3-zaleznosci-sekwencyjne)"
+      "PowerShell(npm run verify -- --reporter=basic run exercises/task-3-zaleznosci-sekwencyjne)",
+      "PowerShell(npm run verify 2>&1)",
+      "Bash(rm -rf 01-sorting-searching/02-sort-by-frequency 02-divide-and-conquer/03-count-inversions 03-dynamic-programming/03-longest-common-subsequence 04-greedy/03-gas-station 05-recursion/03-generate-parentheses 06-trees/02-level-order 07-linked-lists/03-merge-two-sorted 08-queues/01-first-non-repeating-stream)",
+      "Bash(mv 01-sorting-searching/03-search-rotated-sorted 01-sorting-searching/02-search-rotated-sorted)",
+      "Bash(mv 06-trees/03-validate-bst 06-trees/02-validate-bst)",
+      "Bash(mv 08-queues/02-sliding-window-maximum 08-queues/01-sliding-window-maximum)",
+      "Bash(mv 08-queues/03-shortest-path-grid 08-queues/02-shortest-path-grid)",
+      "PowerShell($env:REF=1; npx vitest run exercises_leetcode/02-divide-and-conquer/02-quickselect-kth-largest 2>&1 | Select-String -Pattern \"Test Files|Tests |FAIL\"; Remove-Item Env:REF)",
+      "PowerShell($env:REF=1; npx vitest run exercises_leetcode/09-lru-cache/03-lru-cache-leetcode 2>&1 | Select-String -Pattern \"Test Files|Tests |FAIL\"; Remove-Item Env:REF)"
     ]
   }
 }

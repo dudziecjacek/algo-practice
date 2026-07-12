@@ -1,4 +1,8 @@
 // Your turn. Implement the function, then run `npm test` (or `npm run test:watch`).
 // Stuck? The reference answer is in ./solution.js
 
-export function arrayDiff(a, b) {}
+export function arrayDiff(a, b) {
+  const set = new Set(b);
+
+  return a.filter((el) => !set.has(el));
+}

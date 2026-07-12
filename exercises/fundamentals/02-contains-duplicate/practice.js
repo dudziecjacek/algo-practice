@@ -2,4 +2,8 @@
 // Stuck? The reference answer is in ./solution.js
 
 // 1, 2, 3, 1
-export function containsDuplicate(arr) {}
+export function containsDuplicate(arr) {
+  const set = new Set(arr);
+
+  return arr.length !== set.size;
+}
