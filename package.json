@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "clear-practice": "node clear-practice.mjs",
+    "quiz": "node bigo-quiz/server.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "verify": "cross-env REF=1 vitest run"

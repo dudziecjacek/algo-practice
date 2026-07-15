@@ -27,7 +27,8 @@
       "Bash(mv 08-queues/02-sliding-window-maximum 08-queues/01-sliding-window-maximum)",
       "Bash(mv 08-queues/03-shortest-path-grid 08-queues/02-shortest-path-grid)",
       "PowerShell($env:REF=1; npx vitest run exercises_leetcode/02-divide-and-conquer/02-quickselect-kth-largest 2>&1 | Select-String -Pattern \"Test Files|Tests |FAIL\"; Remove-Item Env:REF)",
-      "PowerShell($env:REF=1; npx vitest run exercises_leetcode/09-lru-cache/03-lru-cache-leetcode 2>&1 | Select-String -Pattern \"Test Files|Tests |FAIL\"; Remove-Item Env:REF)"
+      "PowerShell($env:REF=1; npx vitest run exercises_leetcode/09-lru-cache/03-lru-cache-leetcode 2>&1 | Select-String -Pattern \"Test Files|Tests |FAIL\"; Remove-Item Env:REF)",
+      "Bash(node --input-type=module -e ' *)"
     ]
   }
 }

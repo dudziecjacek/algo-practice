@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big O Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">Θ</span>
+        <h1>Big&nbsp;O Quiz</h1>
+      </div>
+      <div class="scoreboard">
+        <span class="stat">
+          <span class="stat-label">Score</span>
+          <span id="score" class="stat-value">0</span>
+        </span>
+        <span class="stat">
+          <span class="stat-label">Question</span>
+          <span id="progress" class="stat-value">1 / 1</span>
+        </span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="card" id="quiz-card">
+        <div class="card-head">
+          <h2 id="q-title">Loading…</h2>
+          <span class="pill" id="q-index"></span>
+        </div>
+
+        <pre class="code"><code id="q-code"></code></pre>
+
+        <div class="answers">
+          <fieldset class="answer-group" id="time-group">
+            <legend>Time complexity</legend>
+            <div class="options" id="time-options"></div>
+          </fieldset>
+
+          <fieldset class="answer-group" id="space-group">
+            <legend>Space complexity <small>(auxiliary)</small></legend>
+            <div class="options" id="space-options"></div>
+          </fieldset>
+        </div>
+
+        <div class="actions">
+          <button id="check-btn" class="btn primary" disabled>Check answer</button>
+          <button id="next-btn" class="btn" hidden>Next →</button>
+        </div>
+
+        <div class="feedback" id="feedback" hidden></div>
+      </section>
+
+      <section class="card summary" id="summary-card" hidden>
+        <h2>Quiz complete 🎉</h2>
+        <p id="summary-text"></p>
+        <button id="restart-btn" class="btn primary">Restart</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="toggles">
+        <label class="toggle">
+          <input type="checkbox" id="easy-toggle" />
+          Easy mode <small>(4 choices)</small>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="shuffle-toggle" checked />
+          Shuffle on restart
+        </label>
+      </div>
+      <span class="hint">Pick a time <em>and</em> a space answer, then Check.</span>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
